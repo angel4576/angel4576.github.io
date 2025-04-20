@@ -189,10 +189,12 @@
         </a>
       </div>
     </div>
-
+    
     <!-- Game Engine -->
     <div class="card">
-      <img src="/assets/img/fire.png" alt="Particle System">
+      <img src="/assets/img/fire.png" alt="Particle System"
+        onclick="openModal('https://drive.google.com/file/d/1CkAIGdXC8-5qQXX6FJKKBPWgWbu4eyX9/preview')"
+        style="cursor: pointer;" />
       <div class="card-content">
         <h3>Particle System</h3>
         <p>C++ implementation of a particle system, extended to simulate a fire effect with wind interaction</p>
@@ -212,7 +214,6 @@
           </a>
         </div>
       </div>
-
 
     <!-- Mass-spring -->
     <div class="card">
@@ -264,7 +265,7 @@
     © 2025 Zirui Huang
   </footer>
 
-  <!-- 🔧 新增：视频播放弹窗 -->
+  <!-- 新增：视频播放弹窗 -->
     <div class="modal" id="videoModal" onclick="closeModal(event)">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">✖</span>
