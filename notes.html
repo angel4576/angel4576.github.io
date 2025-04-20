@@ -1,7 +1,192 @@
----
-layout: page
-title: Learning note
-subtitle: some learning notes
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notes · Zirui</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+      font-weight: 600;
+      background: #fff;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .note-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .note-list li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 18px;
+    }
+
+    .note-list li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        color: #999;
+    }
+
+    .note-list a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.2s ease, font-weight 0.2s ease;
+    }
+
+    .note-list a:hover {
+        color: #007acc;
+        font-weight: 600;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/about">About</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/notes">Notes</a>
+    <!--<a href="/creative">Creative</a>
+    <a href="/contact">Contact</a>-->
+  </nav>
+
+  <div class="container">
+
+    <!-- AI -->
+    <div class="card">
+      <h3>🧠 CS561 AI</h3>
+      <ul class="note-list">
+        <li><a href="#">Minimax & Alpha-Beta</a></li>
+        <li><a href="#">POMDP / Viterbi</a></li>
+        <li><a href="#">Planning / Unification / CNF</a></li>
+      </ul>
+    </div>
+
+    <!-- Animation -->
+    <div class="card">
+      <h3>🎮 CSCI520 Computer Animation</h3>
+      <ul class="note-list">
+        <li><a href="#https://www.notion.so/Inverse-Kinematics-1d8af6bf1f5a803ca122de45eb2b4164?pvs=4">Inverse Kinematics</a></li>
+        <li><a href="#">Forward Kinematics</a></li>
+        <li><a href="#">Skinning</a></li>
+      </ul>
+    </div>
+
+    <!-- Game Engine -->
+    <div class="card">
+      <h3>🛠️ CSCI522 Game Engine</h3>
+      <ul class="note-list">
+        <li><a href="#">Game Engine</a></li>
+        <li><a href="#">Particle System</a></li>
+      </ul>
+    </div>
+
+    <!-- Math -->
+    <div class="card">
+      <h3>🧮 数学</h3>
+      <ul class="note-list">
+        <li><a href="#">Velocity</a></li>
+        <li><a href="#">Linear Algebra</a></li>
+        <li><a href="#">Calculus</a></li>
+      </ul>
+    </div>
+
+    <!-- Interview -->
+    <div class="card">
+      <h3>📚 面试准备</h3>
+      <ul class="note-list">
+        <li><a href="#https://www.notion.so/C-1d8af6bf1f5a80c298c0ccfdf5317613?pvs=4">C++</a></li>
+        <li><a href="#https://www.notion.so/Visual-Studio-1d8af6bf1f5a80aaa2afc505a5d638a6?pvs=4">Visual Studio</a></li>
+        <li><a href="#">Algorithms</a></li>
+      </ul>
+    </div>
+
+    <!-- TA 笔记 -->
+    <div class="card">
+      <h3>🎓 Tech Art</h3>
+      <ul class="note-list">
+        <li><a href="#">Graphic Rendering Pipeline</a></li>
+        <li><a href="#">HLSL</a></li>
+        <li><a href="#">Illumination model</a></li>
+        <li><a href="#">LDR and HDR</a></li>
+        <li><a href="#https://www.notion.so/Flowmap-1d8af6bf1f5a80369a83e8925a5bb348?pvs=4">Flow Map</a></li>
+        <li><a href="#https://www.notion.so/Alpha-1d8af6bf1f5a81a7b10aec601b28fec0?pvs=4">Alpha Blend</a></li>
+      </ul>
+    </div>
+
+    <!-- GitHub -->
+    <div class="card">
+      <h3>🔧 Github </h3>
+      <ul class="note-list">
+        <li><a href="#https://www.notion.so/Github-1d9af6bf1f5a804d8003dfd54b11ddc5?pvs=4">GitHub Command</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Zirui Huang
+  </footer>
+
+</body>
+</html>
 
 
