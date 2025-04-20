@@ -41,6 +41,15 @@
       gap: 24px;
     }
 
+    .intro {
+        max-width: 1080px;
+        margin: 60px auto 20px;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #444;
+    }
+
     /* card */
     .card {
       background: white;
@@ -175,7 +184,17 @@
     <a href="/contact">Contact</a>-->
   </nav>
 
+  <div class="intro">
+    <p>
+      Here is a selection of my works across game development, shader development, and animation simulation.  
+      Most of these are coursework or personal explorations built in Unity, C++, and OpenGL.<br>
+      <strong>Click on cards to view demo videos or dive into the code.</strong> 
+    </p>
+  </div>
+  
+
   <div class="container">
+    
     <!-- Ruin Raider -->
     <div class="card">
       <img src="/assets/img/RuinRaiderCover.png" alt="Ruin Raider"
@@ -204,6 +223,7 @@
       </div>
     </div>
 
+    <!-- Toon Shader -->
     <div class="card">
         <img src="/assets/img/toon.png" alt="Particle System">
         <div class="card-content">
@@ -213,7 +233,18 @@
               <i class="fab fa-github"></i> GitHub
           </a>
         </div>
-      </div>
+    </div>
+
+    <div class="card">
+        <img src="/assets/img/pbr.png" alt="Physically Based Rendering">
+        <div class="card-content">
+          <h3>Physically Based Rendering</h3>
+          <p>PBR shader using Cook-Torrance BRDF and environment maps to simulate realistic lighting.</p>
+          <a href="https://github.com/angel4576/LearnUnityShader?tab=readme-ov-file#physically-based-rendering" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+    </div>
 
     <!-- Mass-spring -->
     <div class="card">
