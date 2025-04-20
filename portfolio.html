@@ -41,6 +41,7 @@
       gap: 24px;
     }
 
+    /* card */
     .card {
       background: white;
       border-radius: 12px;
@@ -86,12 +87,30 @@
       display: inline-block;
       margin-top: 12px;
       font-size: 14px;
-      color: #007acc;
+      color: #333;
       text-decoration: none;
     }
 
     .card a:hover {
       text-decoration: underline;
+    }
+
+    /* card links */
+    .card-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        font-size: 14px;
+        background: #f3f3f3;
+        color: #333;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+
+    .card-links a:hover {
+        background: #eaeaea;
     }
 
     footer {
@@ -102,7 +121,6 @@
       color: #aaa;
     }
 
-    <!--Modal-->
     .modal {
     display: none;
     position: fixed;
@@ -158,44 +176,86 @@
   </nav>
 
   <div class="container">
-    <!-- ✅ 有图 -->
+    <!-- Ruin Raider -->
     <div class="card">
       <img src="/assets/img/RuinRaiderCover.png" alt="Ruin Raider"
-        onclick="openModal('https://drive.google.com/file/d/1Pfqw_YTiYCFSqye70lCK_T6C0DgM2Ueq/view?usp=drive_link/preview')"
+        onclick="openModal('https://drive.google.com/file/d/1Pfqw_YTiYCFSqye70lCK_T6C0DgM2Ueq/preview')"
         style="cursor: pointer;" />
       <div class="card-content">
         <h3>Ruin Raider</h3>
-        <p>2D action platformer with world-switching and fast-paced melee combat. Built with Unity.</p>
-        <a href="https://github.com/angel4576/RuinRaider" target="_blank">🔗 GitHub</a>
+        <p>2D action platformer with post-apocalyptic setting. Built with Unity.</p>
+        <a href="https://github.com/angel4576/RuinRaider" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
 
-    <!-- ✅ 有图 -->
+    <!-- Game Engine -->
     <div class="card">
-      <img src="/assets/img/shaderfire.png" alt="Stylized Fire Shader">
+      <img src="/assets/img/fire.png" alt="Particle System">
       <div class="card-content">
-        <h3>Stylized Fire Shader</h3>
-        <p>HLSL + ShaderLab demo for stylized, animated flame with wind control.</p>
-        <a href="https://github.com/ziruihuang/LearnUnityShader" target="_blank">🔗 GitHub</a>
+        <h3>Particle System</h3>
+        <p>C++ implementation of a particle system, extended to simulate a fire effect with wind interaction</p>
+        <a href="https://github.com/angel4576/CSCI522-GameEngine" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
 
-    <!-- ✅ 没图 -->
+    <div class="card">
+        <img src="/assets/img/toon.png" alt="Particle System">
+        <div class="card-content">
+          <h3>Stylized Character Toon Shading</h3>
+          <p>Stylized toon shader for 3D character rendering, built in Unity using ShaderLab and HLSL.</p>
+          <a href="https://github.com/angel4576/LearnUnityShader?tab=readme-ov-file#toon-shading" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+
+    <!-- Mass-spring -->
+    <div class="card">
+        <div class="card-content">
+          <h3>Jello Cube Simulation</h3>
+          <p>A physically-based simulation of a jello cube based on a 3D mass-spring system in C++.</p>
+          <a href="https://github.com/angel4576/ComputerAnimationAndSimulation" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+    </div>
+
+    <!-- Interpolation -->
+    <div class="card">
+        <div class="card-content">
+          <h3>Motion Capture Interpolation</h3>
+          <p>C++ implementation of three interpolation schemes to interpolate human motion data.</p>
+          <a href="https://github.com/angel4576/ComputerAnimationAndSimulation?tab=readme-ov-file#motion-capture-interpolation" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+    </div>
+
+    <!-- IK -->
     <div class="card">
       <div class="card-content">
-        <h3>Procedural IK + Skinning</h3>
-        <p>C++ implementation of FK / IK animation, mesh skinning, and particle simulation using OpenGL.</p>
-        <a href="https://github.com/ziruihuang/ComputerAnimationAndSimulation" target="_blank">🔗 GitHub</a>
+        <h3>Inverse Kinematics</h3>
+        <p>C++ implementation of Forward and Inverse Kinematics, with mesh skinning using OpenGL.</p>
+        <a href="https://github.com/angel4576/ComputerAnimationAndSimulation" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
 
-    <!-- ✅ 视频项目（封面图 + 链接） -->
+    <!-- MFA -->
     <div class="card">
-      <img src="/assets/img/witchtrailer.png" alt="The Witch's Crucible">
+      <!--<img src="/assets/img/witchtrailer.png" alt="The Witch's Crucible">-->
       <div class="card-content">
-        <h3>The Witch's Crucible</h3>
-        <p>Narrative-driven MFA project. Custom character control, dissolve effect, and visual storytelling.</p>
-        <a href="https://www.bilibili.com/video/BV1Xx4y1Y7LK" target="_blank">🎥 Watch Trailer</a>
+        <h3>The Witch's Shadow</h3>
+        <p>Narrative-driven MFA project, currently in development.</p>
+        <a href="https://github.com/angel4576/TheWitchsCrucible" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
   </div>
