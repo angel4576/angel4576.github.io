@@ -1,8 +1,163 @@
----
-layout: page
-title: Portfolio
-subtitle: Showing my work
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio · Zirui</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+      font-weight: 600;
+      background: #fff;
+    }
 
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
 
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .card-content {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      flex: 1;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/about">About</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/notes">Notes</a>
+    <a href="/creative">Creative</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- ✅ 有图 -->
+    <div class="card">
+      <img src="/assets/img/ruinraider.png" alt="Ruin Raider">
+      <div class="card-content">
+        <h3>Ruin Raider</h3>
+        <p>2D action platformer with world-switching and fast-paced melee combat. Built with Unity.</p>
+        <a href="https://github.com/ziruihuang/RuinRaider" target="_blank">🔗 GitHub</a>
+      </div>
+    </div>
+
+    <!-- ✅ 有图 -->
+    <div class="card">
+      <img src="/assets/img/shaderfire.png" alt="Stylized Fire Shader">
+      <div class="card-content">
+        <h3>Stylized Fire Shader</h3>
+        <p>HLSL + ShaderLab demo for stylized, animated flame with wind control.</p>
+        <a href="https://github.com/ziruihuang/LearnUnityShader" target="_blank">🔗 GitHub</a>
+      </div>
+    </div>
+
+    <!-- ✅ 没图 -->
+    <div class="card">
+      <div class="card-content">
+        <h3>Procedural IK + Skinning</h3>
+        <p>C++ implementation of FK / IK animation, mesh skinning, and particle simulation using OpenGL.</p>
+        <a href="https://github.com/ziruihuang/ComputerAnimationAndSimulation" target="_blank">🔗 GitHub</a>
+      </div>
+    </div>
+
+    <!-- ✅ 视频项目（封面图 + 链接） -->
+    <div class="card">
+      <img src="/assets/img/witchtrailer.png" alt="The Witch's Crucible">
+      <div class="card-content">
+        <h3>The Witch's Crucible</h3>
+        <p>Narrative-driven MFA project. Custom character control, dissolve effect, and visual storytelling.</p>
+        <a href="https://www.bilibili.com/video/BV1Xx4y1Y7LK" target="_blank">🎥 Watch Trailer</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zirui Huang
+  </footer>
+
+</body>
+</html>
