@@ -101,6 +101,49 @@
       text-align: center;
       color: #aaa;
     }
+
+    <!--Modal-->
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .modal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
   </style>
 </head>
 <body>
@@ -117,11 +160,13 @@
   <div class="container">
     <!-- ✅ 有图 -->
     <div class="card">
-      <img src="/assets/img/ruinraider.png" alt="Ruin Raider">
+      <img src="/assets/img/RuinRaiderCover.png" alt="Ruin Raider"
+        onclick="openModal('https://drive.google.com/file/d/1Pfqw_YTiYCFSqye70lCK_T6C0DgM2Ueq/view?usp=drive_link')"
+        style="cursor: pointer;" />
       <div class="card-content">
         <h3>Ruin Raider</h3>
         <p>2D action platformer with world-switching and fast-paced melee combat. Built with Unity.</p>
-        <a href="https://github.com/ziruihuang/RuinRaider" target="_blank">🔗 GitHub</a>
+        <a href="https://github.com/angel4576/RuinRaider" target="_blank">🔗 GitHub</a>
       </div>
     </div>
 
@@ -158,6 +203,33 @@
   <footer>
     © 2025 Zirui Huang
   </footer>
+
+  <!-- 🔧 新增：视频播放弹窗 -->
+    <div class="modal" id="videoModal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+            <iframe id="videoFrame" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+  
+  <script>
+    function openModal(videoURL) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = videoURL;
+      modal.classList.add('active');
+    }
+  
+    function closeModal(e) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      if (!e || e.target === modal || e.target.classList.contains('close-btn')) {
+        iframe.src = "";
+        modal.classList.remove('active');
+      }
+    }
+  </script>
+  
 
 </body>
 </html>
