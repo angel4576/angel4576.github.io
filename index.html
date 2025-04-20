@@ -1,5 +1,118 @@
 ---
-layout: home
-title: My website
-subtitle: This is where I will tell my friends way too much about me
+layout: none
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zirui Huang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #007acc;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/4e59fdc174.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav>
+    <a href="/about">About</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/notes">Notes</a>
+    <a href="/creative">Creative</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <img src="/assets/img/BRS.jpg" alt="avatar" class="avatar" />
+    <h1>Hi, I'm Zirui</h1>
+    <p>Game developer, Tech artist, Guitar player, and sketch enthusiast.<br/>
+       CS (Game Development) @ USC</p>
+
+    <div class="social-icons">
+      <a href="https://github.com/angel4576" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:a472383277@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://space.bilibili.com/xxxxx" title="Bilibili"><i class="fas fa-tv"></i></a>
+      <a href="https://linkedin.com/in/ziruihuang4576" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <footer>
+      © 2025 Zirui Huang
+    </footer>
+  </div>
+
+</body>
+</html>
