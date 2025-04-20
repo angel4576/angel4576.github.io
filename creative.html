@@ -1,5 +1,224 @@
----
-layout: page
-title: Creative work
-subtitle: some personal art practice
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative · Zirui</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+      font-weight: 600;
+      background: #fff;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    h2 {
+      max-width: 1080px;
+      margin: 60px auto 10px;
+      padding: 0 20px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* 🖼️ Sketch Gallery */
+    .gallery {
+      max-width: 1080px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    /* 🎸 Guitar Section */
+    .container {
+      max-width: 1080px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .card-content {
+      padding: 14px 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    /* 🎬 Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        aspect-ratio: 16/9;
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .modal iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/about">About</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/notes">Notes</a>
+    <a href="/creative">Creative</a>
+  </nav>
+
+  <!-- 🎨 Sketchbook -->
+  <h2>🎨 Sketchbook</h2>
+  <div class="gallery">
+    <img src="/assets/img/art/Miku1.png" alt="Sketch 1" />
+    <img src="/assets/img/art/xiangling.png" alt="Sketch 2" />
+    <img src="/assets/img/art/人体2.png" alt="Sketch 3" />
+    <img src="/assets/img/art/人体4.png" alt="Sketch 4" />
+  </div>
+
+  <!-- 🎸 Guitar Practice -->
+  <h2>🎸 Guitar Practice</h2>
+  <div class="container">
+    
+
+    <!-- ✅ 点击卡片弹出播放 -->
+    <div class="card" onclick="openModal('https://player.bilibili.com/player.html?bvid=BV18Z421175G')">
+      <div class="card-content">
+        <h3>Connect</h3>
+        <p>The opening song of Puella Magi Madoka Magica.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔧 Modal -->
+  <div class="modal" id="videoModal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">✖</span>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zirui Huang
+  </footer>
+
+  <!-- JS 控制弹出和关闭 -->
+  <script>
+    function openModal(videoURL) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = videoURL;
+      modal.classList.add('active');
+    }
+
+    function closeModal(e) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoFrame');
+      if (!e || e.target === modal || e.target.classList.contains('close-btn')) {
+        iframe.src = "";
+        modal.classList.remove('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
